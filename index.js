@@ -5,31 +5,53 @@ const closeIcon= document.querySelector(".closeIcon");
 const menuButton = document.querySelector(".menu-button");
 const menuIcon = document.querySelector(".menu-icon");
 
-function toggleMenu() {
+function toggleMenu(event) {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
     menuIcon.classList.remove("showMenu");
     menuButton.style.color = "black";
     menuButton.style.border = "1px solid #000";
+    menuButton.style.backgroundColor = "#f8f6f4";
     menuIcon.style.backgroundColor = "black";
     menuIcon.style.setProperty('--black', 'black');
+    var target = $(this).attr("href");
+    $("html, body").animate({
+      scrollTop: $(target).offset().top - 30
+    }, 1000);
   } else {
     menu.classList.add("showMenu");
     menuIcon.classList.add("showMenu");
     menuButton.style.color = "white";
     menuButton.style.border = "1px solid #fff";
+    menuButton.style.backgroundColor = "black";
     menuIcon.style.backgroundColor = "white";
     menuIcon.style.setProperty('--black', 'white');
   }
 }
 
-hamburger.addEventListener("click", toggleMenu);
+hamburger.addEventListener("click", toggleMenu(event));
 
 menuItems.forEach( 
   function(menuItem) { 
     menuItem.addEventListener("click", toggleMenu);
   }
 )
+
+$(document).ready(function () {
+  let backImage = $("#back-image");
+  let topImage = $("#current-img");
+  let backImageAspectRatio = backImage.width() / backImage.height();
+  let topImageAspectRatio = topImage.width() / topImage.height();
+
+  if (topImageAspectRatio > backImageAspectRatio) {
+    topImage.css("width", "100%");
+    topImage.css("height", "auto");
+  } else {
+    topImage.css("width", "auto");
+    topImage.css("height", "100%");
+  }
+
+});
 
 let currentImg = document.getElementById("current-img");
 let prevBtn = document.getElementById("prev-btn");

@@ -64,11 +64,17 @@ body{
     font-size: 30px;
 } */
 
+.logo{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
 .menu-button {
     position: fixed;
     z-index: 100;
     left: 30px;
-    top: 80px;
+    top: 70px;
     font-family: 'Noah', sans-serif;
     display: flex;
     gap: 5px;
@@ -132,7 +138,7 @@ body{
     right: 0;
     bottom: 0;
     z-index: 99;
-    background: black;
+    background: var(--blue);
     color: white;
     list-style: none;
     padding-top: 4rem;
@@ -144,10 +150,18 @@ body{
   }
 
   .menuItem {
+    font-family: 'Noah', sans-serif;
     display: block;
     margin: 2rem 4rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: white;
+    text-decoration: none;
+    transition: all 200ms ease;
+  }
+
+  .menuItem:hover{
+    color: white;
+    font-size: 2.3rem;
     text-decoration: none;
   }
   
@@ -210,12 +224,19 @@ body{
   .upper{
     padding: 30px;
     padding-bottom: 0px;
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
     text-align: center;
   }
   .social{
-    padding-left: 30px;
+    text-align: center;
+    padding-left: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  .social img{
+    height: 23px;
   }
 
   .yellow{
@@ -235,7 +256,10 @@ body{
   .second-car{
     position: relative;
     bottom: -50px;
-    
+    width: 450px;
+  }
+  .car-img2{
+    width: 450px;
   }
 
   .images{
@@ -269,6 +293,9 @@ body{
     .car-img{
       width: 500px;
     }
+    .car-img2{
+      width: 550px;
+    }
     .experience{
       left: 140px;
     }
@@ -284,6 +311,9 @@ body{
     }
     .car-img{
       width: 300px;
+    }
+    .car-img2{
+      width: 350px;
     }
     .experience{
       left: 80px;
@@ -531,6 +561,50 @@ body{
       padding-right: 80px;
     }
   }
+  @media screen and (max-width: 1044px) {
+    .section3-contentt{
+      top: 40px;
+      width: 60%;
+      padding-right: 70px;
+    }
+    #section3{
+      gap: 80px;
+    }
+  }
+  @media screen and (max-width: 980px) {
+    .section3-img{
+      width: 450px;
+      position: relative;
+      left: -20px;
+    }
+    .section3-contentt{
+      top: 40px;
+      width: 60%;
+      padding-right: 70px;
+      font-size: 22px;
+    }
+    #section3{
+      gap: 50px;
+    }
+  }
+
+  @media screen and (max-width: 890px) {
+    .section3-img{
+      width: 450px;
+      position: relative;
+      left: -20px;
+    }
+    .section3-contentt{
+      top: 40px;
+      width: 60%;
+      padding-right: 70px;
+      font-size: 22px;
+    }
+    #section3{
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
 
   #section4{
     display: flex;
@@ -543,15 +617,17 @@ body{
     font-weight: normal;
     display: grid;
     grid-template-columns: 300px 300px;
+    padding-bottom: 150px;
   }
   .grid-item h6, .grid-item-left h6{
     font-weight: normal;
     color: #222a2a;
     margin-top: 10px;
+    font-size: 20px;
   }
   .grid-item, .grid-item-left{
     background-color: #e9f1f4;
-    padding: 40px 20px;
+    padding: 50px 20px;
     font-size: 30px;
     text-align: center;
   }
@@ -660,6 +736,13 @@ body{
   overflow: hidden; */
   }
 
+  .tape{
+    position: absolute;
+    top: -65px;
+    right: 50%;
+    margin-right: -450px;
+  }
+
   .gallery {
     position: absolute;
     text-align: center;
@@ -667,20 +750,31 @@ body{
     max-height: 600px;
     right: 50%;
     margin-right: -570px;
-    top: 50px;
+    top: 40px;
   }
 
 .image-gallery{
-    display: block;
+    /* display: block;
     height: 600px;
     margin: 0 auto;
     position: relative;
-    bottom: 110px;
+    bottom: 0px; */
+    position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 #current-img {
-  width: 500px;
+  /* width: 500px;
   max-width: 500px;
-  max-height: 550px;
+  max-height: 550px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
 }
 /* .right-section {
   position: relative;
@@ -701,7 +795,7 @@ body{
 #prev-btn, #next-btn{
   position: relative;
   text-align: center;
-  bottom: 100px;
+  bottom: -590px;
 }
 .icon{
     font-size: 45px;
@@ -713,7 +807,7 @@ body{
     right: 50%;
     margin-right: -420px;
     text-align: center;
-    bottom: 70px;
+    bottom: 100px;
     padding: 0px;
     color: #3d2d25;
     font-size: 20px;
@@ -739,13 +833,13 @@ button:focus{
   width: 150px;
 }
 .laptop{
-  width: 90px;
+  width: 85px;
 }
 .cup{
   height: 100px;
 }
 .clock{
-  height: 100px;
+  height: 98px;
 }
 
 @media screen and (max-width: 1283px) {
@@ -754,18 +848,24 @@ button:focus{
     margin-right: -520px;
     top: 30px;
   }
-
-.image-gallery{
-    height: 500px;
-}
-#current-img {
-  width: 410px;
-  max-width: 410px;
-  max-height: 490px;
-}
+  #prev-btn, #next-btn{
+    bottom: -470px;
+  }
+  #view-all{
+      bottom: 230px;
+  }
 }
 
 @media screen and (max-width: 1160px) {
+  .right-section{
+    height: 550px;
+  }
+  .tape{
+    position: absolute;
+    top: 630px;
+    right: 50%;
+    margin-right: -100px;
+  }
   #section4{
     flex-wrap: wrap;
   }
@@ -776,36 +876,22 @@ button:focus{
     align-self: stretch;
     grid-template-columns: 1fr 1fr;
   }
-  .image-gallery{
-    display: block;
-    height: 600px;
-    margin: 0 auto;
-    position: relative;
-    bottom: 110px;
-}
 .gallery {
   width: 500px;
   max-height: 600px;
   right: 50%;
   margin-right: -255px;
-  top: 690px;
-}
-#current-img {
-  width: 500px;
-  max-width: 500px;
-  max-height: 550px;
+  top: 720px;
 }
 
 #view-all{
   position: absolute;
   right: 50%;
   margin-right: -100px;
-  text-align: center;
-  bottom: 70px;
-  padding: 0px;
-  color: #3d2d25;
-  font-size: 20px;
-  font-weight: 900;
+  bottom: 50px;
+}
+#prev-btn, #next-btn{
+  bottom: -410px;
 }
 }
 
@@ -817,6 +903,7 @@ button:focus{
     text-align: center;
     padding: 20px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 #section5 h1{
@@ -830,8 +917,8 @@ button:focus{
 }
 
 .love-wall-img{
-    width: 500px;
-    height: 300px;
+    width: 650px;
+    height: 350px;
     padding: 20px 10px;
 }
 
@@ -981,7 +1068,7 @@ button:focus{
 footer{
   background-color: var(--blue);
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
 
 footer h1{
@@ -995,31 +1082,45 @@ footer h1{
 .footer-wrapper{
   padding-top: 20px;
   display: flex;
-  gap: 40px;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: center;
 }
 
 .hashtags{
-  font-family: 'Apricot', sans-serif;
-  line-height: 1.1;
-  letter-spacing: 1.5px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
+.hash-explore{
+  width: 60px;
+}
+.hash-enhance{
+  width: 60px;
+}
+.hash-experience{
+ width: 80px;
+}
+
+
 .map{
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 400px;
 }
 
 .details{
   font-family: 'Noah', sans-serif;
   font-weight: bold;
   color: #525050;
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 form {
-  width: 300px;
+  width: 400px;
   margin: auto;
-  padding: 30px;
+  padding: 0px;
 }
 
 form div {
@@ -1065,7 +1166,7 @@ button[type="submit"] {
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 1.5px;
 }
 
