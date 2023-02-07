@@ -48,14 +48,6 @@ $(document).ready(function () {
   }
 });
 
-document.addEventListener("click", function(event) {
-  if (!event.target.classList.contains("menuItem")) return;
-  event.preventDefault();
-  var target = document.querySelector(event.target.getAttribute("href"));
-  target.scrollIntoView({ behavior: "smooth", block: "start" });
-  window.scrollBy(0, -20);
-});
-
 
 let currentImg = document.getElementById("current-img");
 let prevBtn = document.getElementById("prev-btn");
@@ -137,7 +129,7 @@ function sendForm() {
     return;
   }
 
-  emailjs.sendForm('your_email_service', 'your_template_id', 'form_id')
+  emailjs.sendForm('service_i3c4w7l', 'template_re618os', 'form_id')
     .then(function(response) {
        console.log('Email successfully sent!')
     }, function(error) {
