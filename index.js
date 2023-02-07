@@ -5,7 +5,7 @@ const closeIcon= document.querySelector(".closeIcon");
 const menuButton = document.querySelector(".menu-button");
 const menuIcon = document.querySelector(".menu-icon");
 
-function toggleMenu(event) {
+function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
     menuIcon.classList.remove("showMenu");
@@ -14,10 +14,6 @@ function toggleMenu(event) {
     menuButton.style.backgroundColor = "#f8f6f4";
     menuIcon.style.backgroundColor = "black";
     menuIcon.style.setProperty('--black', 'black');
-    var target = $(this).attr("href");
-    $("html, body").animate({
-      scrollTop: $(target).offset().top - 30
-    }, 1000);
   } else {
     menu.classList.add("showMenu");
     menuIcon.classList.add("showMenu");
@@ -29,7 +25,7 @@ function toggleMenu(event) {
   }
 }
 
-hamburger.addEventListener("click", toggleMenu(event));
+hamburger.addEventListener("click", toggleMenu);
 
 menuItems.forEach( 
   function(menuItem) { 
@@ -51,6 +47,12 @@ $(document).ready(function () {
     topImage.css("height", "100%");
   }
 
+  $(".menuItem").click(function() {
+    var target = $(this).attr("href");
+    $("html, body").animate({
+      scrollTop: $(target).offset().top - 30
+    }, 1000);
+  });
 });
 
 let currentImg = document.getElementById("current-img");
