@@ -46,14 +46,16 @@ $(document).ready(function () {
     topImage.css("width", "auto");
     topImage.css("height", "100%");
   }
-
-  $(".menuItem").click(function() {
-    var target = $(this).attr("href");
-    $("html, body").animate({
-      scrollTop: $(target).offset().top - 30
-    }, 1000);
-  });
 });
+
+document.addEventListener("click", function(event) {
+  if (!event.target.classList.contains("menuItem")) return;
+  event.preventDefault();
+  var target = document.querySelector(event.target.getAttribute("href"));
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+  window.scrollBy(0, -20);
+});
+
 
 let currentImg = document.getElementById("current-img");
 let prevBtn = document.getElementById("prev-btn");
