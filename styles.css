@@ -38,7 +38,7 @@ body{
   height: 100vh;
 }
 
-.section1-lay{
+/* .section1-lay{
     display: flex;
     height: 100vh;
     position: relative;
@@ -62,12 +62,12 @@ body{
     font-weight: 900;
     text-align: center;
     font-size: 30px;
-}
+} */
 
 .menu-button {
     position: fixed;
     z-index: 100;
-    right: 30px;
+    left: 30px;
     top: 80px;
     font-family: 'Noah', sans-serif;
     display: flex;
@@ -161,7 +161,7 @@ body{
   .experience{
     width: 160px;
   }
-  .exploree{
+  /* .exploree{
     position: relative;
     bottom: 100px;
     margin: 0px 310px;
@@ -186,49 +186,112 @@ body{
     position: relative;
     bottom: 550px;
     left: 180px;
-  }
+  } */
 
   .carr{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     position: relative;
-    bottom: 530px;
-    left: 60px;
+    justify-content: space-between;
+    /* bottom: 530px; */
+    /* left: 60px; */
   }
 
   .first-car, .second-car, .third-car{
-    width: 320px;
+    width: 400px;
+  }
+  .car-img{
+    width: 400px;
+  }
+
+  .upper{
+    padding: 30px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .social{
+    padding-left: 30px;
+  }
+
+  .yellow{
+    background-color: #ffde59;
+    color: black !important;
+    border: none !important;
+  }
+
+  .lower{
+    padding-top: 0px;
+    padding-bottom: 90px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: url('./assets/images/bg.png');
   }
 
   .second-car{
     position: relative;
-    bottom: 100px;
-    margin: 0px 160px;
+    bottom: -50px;
+    
+  }
+
+  .images{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .experience{
+    position: relative;
+    left: 60px;
+  }
+
+  .enhance{
+    position: relative;
+    right: 60px;
+  }
+
+   .exploree{
+    position: relative;
+    bottom: -50px;
+    margin: 0px 310px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    .first-car, .second-car, .third-car{
+      width: 500px;
+    }
+    .car-img{
+      width: 500px;
+    }
   }
 
   #section2{
-    padding: 20px;
+    padding: 30px;
+    padding-top: 200px;
     position: relative;
   }
 
   .left-shape{
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 200px;
     height: 450px;
   }
 
   .right-shape{
     position: absolute;
     right: 0;
-    bottom: -150px;
+    bottom: -100px;
     height: 450px;
   }
 
   .plane{
     position: absolute;
     right: 28%;
-    top: 190px;
+    top: 370px;
     width: 200px;
   }
 
@@ -327,19 +390,7 @@ body{
     background-color: #f8f3f4;
   }
 
-  .gallery {
-    position: absolute;
-    text-align: center;
-    width: 500px;
-    right: 150px;
-    top: 50px;
-
-    /* position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; */
-  }
+ 
 
   /* #current-img,
 #lightbox-img {
@@ -382,9 +433,6 @@ body{
   background-color: rgba(0, 0, 0, 0.8);
 } */
   
-  #current-img {
-    width: 100%;
-  }
   
   .lightbox {
     position: fixed;
@@ -436,18 +484,41 @@ body{
     margin-left: 30px;
     justify-content: center;
     margin-top: 50px;
-    
+    text-align: center;
     /* position: relative;
   width: 500px;
   height: 300px;
   overflow: hidden; */
   }
+
+  .gallery {
+    position: absolute;
+    text-align: center;
+    width: 500px;
+    max-height: 600px;
+    right: 50%;
+    margin-right: -570px;
+    top: 50px;
+
+    /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  }
+
 .image-gallery{
     display: block;
     height: 600px;
     margin: 0 auto;
     position: relative;
     bottom: 110px;
+}
+#current-img {
+  width: 500px;
+  max-width: 500px;
+  max-height: 550px;
+  
 }
 /* .right-section {
   position: relative;
@@ -476,11 +547,17 @@ body{
 }
 #view-all{
     /* display: block; */
+    /* position: absolute;
+    right: 25%;
+    margin-right: -182.5px;
+    bottom: 70px; */
+    
     position: absolute;
-    right: 21%;
+    right: 50%;
+    margin-right: -420px;
+    text-align: center;
     bottom: 70px;
     padding: 0px;
-    margin: 0px;
     color: #3d2d25;
     font-size: 20px;
     font-weight: 900;
@@ -580,9 +657,11 @@ button:focus{
 }
 
 .radius-img{
-    height: 150px;
-    width: 100px;
+    height: 250px;
+    width: 200px;
     margin: 10px;
+    border-radius: 20px;
+    border: 3px solid #e2ca9f;
 }
 
 .section6-content, .section7-content{
@@ -624,16 +703,18 @@ button:focus{
 }
 
 #section8{
-  padding: 50px 30px;
+  padding: 100px 30px;
+  background-image: url('./assets/images/meetm2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .section8-content{
-  padding: 20px 20px;
+  padding: 40px 20px;
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  background-color: white;
-  opacity: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .section8-content h1{
