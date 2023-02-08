@@ -132,7 +132,9 @@ function sendForm() {
   emailjs.sendForm('service_i3c4w7l', 'template_re618os', 'form_id')
     .then(function(response) {
        console.log('Email successfully sent!')
+       alert('Email successfully sent!');
     }, function(error) {
        console.log('Failed to send email: ' + error);
+       alert('There was some problem with the server. Please try again later or reach out to us directly')
     });
 }
