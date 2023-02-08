@@ -141,9 +141,10 @@ body{
     background: var(--blue);
     color: white;
     list-style: none;
-    padding-top: 4rem;
     margin: 0px;
     overflow-y: scroll;
+    padding: 0px;
+    padding-top: 5rem;
   }
 
   @media screen and (max-height: 613px) {
@@ -193,7 +194,7 @@ body{
       font-size: 1.2rem;
     }
     .menu{
-      padding-top: 5rem;
+      padding-top: 7rem;
     }
   }
 
