@@ -59,7 +59,8 @@ let lightboxNext = document.getElementById("lightbox-next");
 let lightboxClose = document.getElementById("lightbox-close");
 let viewAll = document.getElementById("view-all");
 
-let images = ["./assets/images/hori.jpg", "./assets/images/vertical.jpg"];
+let images = ["./assets/images/gallery1.webp", "./assets/images/gallery2.webp", './assets/images/gallery3.webp', './assets/images/gallery4.webp',
+'./assets/images/gallery5.webp'];
 let currentIndex = 0;
 
 currentImg.addEventListener("click", function() {
