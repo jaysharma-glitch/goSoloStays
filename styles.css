@@ -35,7 +35,7 @@ body{
 }
 
 #section1{
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* .section1-lay{
@@ -270,26 +270,46 @@ body{
   .yellow{
     background-color: #ffde59;
     color: black !important;
-    border: none !important;
+    border: 1px solid black !important;
+  
   }
-
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 600px) {
     .yellow{
       font-size: 18px !important;
-    }
-    .upper{
-      padding: 15px;
-    }
-    .menu-button{
-      left: 15px;
-    }
-    .social{
-      padding-left: 10px;
     }
     .logo{
       height: 120px;
       width: 120px;
     }
+  }
+  
+
+  @media screen and (max-width: 520px) {
+    .upper{
+      padding: 15px;
+      flex-direction: row-reverse;
+    }
+    .menu-button{
+      left: unset;
+      right: 15px;
+    }
+    .social{
+      padding-left: unset;
+      padding-right: 10px;
+    }
+    
+    .button-div{
+      display: none;
+    }
+}
+@media screen and (max-width: 307px) {
+  .logo{
+    height: 100px;
+    width: 100px;
+  }
+  .menu-button{
+    right: 20px;
+  }
 }
   .lower{
     padding-top: 0px;
@@ -297,6 +317,9 @@ body{
     padding-left: 30px;
     padding-right: 30px;
     background-image: url('./assets/images/bg.png');
+  }
+  .button-div2{
+    display: none;
   }
 
   .second-car{
@@ -434,7 +457,12 @@ body{
   }
 }
 
-
+@media screen and (max-width: 520px) {
+.button-div2{
+  display: block;
+  margin-top: 20px;
+}
+}
 
 @media screen and (max-width: 462px) {
   .fourth-car{
@@ -481,16 +509,26 @@ body{
 }
 }
 
+@media screen and (max-width: 342px) {
+  .fourth-car{
+    display: block;
+    width: 250px;
+  }
+  .car-img{
+    width: 250px;
+  }
+}
+
   #section2{
     padding: 30px;
-    padding-top: 200px;
+    padding-top: 150px;
     position: relative;
   }
 
   .left-shape{
     position: absolute;
     left: 0;
-    top: 200px;
+    top: 100px;
     height: 450px;
   }
 
@@ -504,7 +542,7 @@ body{
   .plane{
     position: absolute;
     right: 28%;
-    top: 380px;
+    top: 330px;
     width: 200px;
   }
 
@@ -544,189 +582,75 @@ body{
     padding: 5px 20px;
     width: 100%;
   }
-
-
-  @media screen and (min-width: 1600px) {
-    #section2{
-      padding: 30px;
-      padding-top: 300px;
+  
+  @media screen and (min-width: 1742px){
+    .plane{
+      right: 25%;
+      top: 250px;
+    }
+  }
+  @media screen and (max-width: 1376px){
+    .plane{
+      right: 23%;
+    }
+  }
+  @media screen and (max-width: 1202px){
+    .plane{
+      right: 18%;
     }
     .left-shape{
-      top: 300px;
-      height: 450px;
-    }
-  
-    .right-shape{
-      bottom: -100px;
-      
-    }
-  
-    .plane{
-      right: 28%;
-      top: 470px;
-    }
+    height: 350px;
   }
 
-  @media screen and (max-width: 1443px) {
+  .right-shape{
+    height: 350px;
+  }
+  .section2-content{
+    width: 50%;
+  }
+  }
+  @media screen and (max-width: 960px){
     .plane{
-      right: 24%;
+      right: 8%;
     }
+    .left-shape{
+    height: 250px;
   }
 
-  @media screen and (max-width: 1283px) {
-    #section2{
-      padding: 30px;
-      padding-top: 150px;
+  .right-shape{
+    height: 250px;
+    bottom: -200px;
+  }
+  .section2-content{
+    width: 70%;
+  }
+  }
+  @media screen and (max-width: 743px){
+    .plane{
+      right: 3%;
+      top: 220px;
     }
     .section2-content{
-      padding-top: 50px;
-      width: 50%;
+      width: 90%;
     }
-    .left-shape{
-      top: 120px;
-      height: 400px;
-    }
-  
     .right-shape{
-      bottom: -100px;
-      height: 400px;
-    }
-  
-    .plane{
-      right: 22%;
-      top: 230px;
+      bottom: -220px;
     }
   }
-  @media screen and (max-width: 1152px) {
-    #section2{
-      
-    }
-    .section2-content{
-      padding-top: 50px;
-      width: 50%;
-    }
-    .left-shape{
-      top: 120px;
-      height: 350px;
-    }
-  
-    .right-shape{
-      bottom: -100px;
-      height: 350px;
-    }
-  
+  @media screen and (max-width: 469px){
     .plane{
-      right: 15%;
+      right: 3%;
+      top: 100px;
     }
-  }
-  @media screen and (max-width: 990px) {
     .section2-content{
-      padding-top: 250px;
-      width: 50%;
-    }
-    .left-shape{
-      top: 300px;
-      height: 300px;
-    }
-  
-    .right-shape{
-      bottom: -100px;
-      height: 300px;
-    }
-  
-    .plane{
-      right: 15%;
-      top: 410px;
-    }
-    .section2-content h1{
-      font-size: 30px;
-      font-weight: normal;
-      line-height: 1.5;
-    }
-    
-    .section2-content p{
-      color: #222a2a;
-      line-height: 1.5;
-      font-size: 16px;
-      letter-spacing: 1.5px;
-    }
-  }
-
-  @media screen and (max-width: 842px) {
-    .section2-content{
-      padding-top: 400px;
-      width: 80%;
-    }
-    .left-shape{
-      top: 300px;
-      height: 250px;
-    }
-  
-    .right-shape{
-      bottom: -250px;
-      height: 250px;
-    }
-  
-    .plane{
-      right: 5%;
-      top: 480px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .section2-content{
-      padding-top: 400px;
       width: 95%;
     }
-  }
-
-  @media screen and (max-height: 672px) {
     #section2{
-      padding-top: 300px;
-    }
-  
-    .left-shape{
-      top: 300px;
-    }
-    .plane{
-      top: 400px;
+      padding: 20px;
+      padding-top: 180px;
     }
   }
-  @media screen and (max-height: 547px) {
-    #section2{
-      padding-top: 400px;
-    }
   
-    .left-shape{
-      top: 400px;
-    }
-    .plane{
-      top: 500px;
-    }
-  }
-  @media screen and (max-height: 435px) {
-    #section2{
-      padding-top: 500px;
-    }
-  
-    .left-shape{
-      top: 500px;
-    }
-    .plane{
-      top: 600px;
-    }
-  }
-  @media screen and (max-height: 339px) {
-    #section2{
-      padding-top: 550px;
-    }
-  
-    .left-shape{
-      top: 600px;
-    }
-    .plane{
-      top: 650px;
-    }
-  }
 
   #section3{
     background-image: linear-gradient(8deg, var(--darkBlue) 70%, #F8F6F4 calc(70% + 2px));
@@ -827,6 +751,24 @@ body{
       width: 300px;
       position: relative;
       left: -110px;
+      top: 80px;
+    }
+    .section3-contentt{
+      top: 120px;
+      width: 80%;
+      padding-right: 0px;
+      padding-bottom: 80px;
+      font-size: 22px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 419px) {
+    
+    .section3-img{
+      width: 250px;
+      position: relative;
+      left: unset;
       top: 80px;
     }
     .section3-contentt{
@@ -1158,6 +1100,22 @@ button:focus{
   }
 }
 
+@media screen and (max-width: 342px) {
+  .services {
+    align-self: stretch;
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    top: 1420px;
+  }
+  .tape{
+    top: 1320px;
+  }
+  .right-section{
+    margin-top: 100px;
+  }
+}
+
 
 
 #section5{
@@ -1334,6 +1292,13 @@ button:focus{
 }
 .first-wall, .second-wall, .third-wall, .fourth-wall, .fifth-wall{
   width: 100%;
+}
+}
+@media screen and (max-width: 342px) {
+  .love-wall-img{
+    width: 250px;
+    height: 180px;
+    padding: 30px 10px;
 }
 }
 
