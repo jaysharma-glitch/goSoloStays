@@ -143,6 +143,7 @@ body{
     list-style: none;
     padding-top: 4rem;
     margin: 0px;
+    overflow-y: scroll;
   }
 
   @media screen and (max-height: 613px) {
@@ -155,6 +156,7 @@ body{
       transform: translateY(-200%);
     }
   }
+
 
   .showMenu {
     transform: translateY(0);
@@ -180,6 +182,12 @@ body{
     text-decoration: underline;
   }
   
+  @media screen and (max-width: 990px) {
+    .upper{
+      padding-bottom: 20px;
+    }
+  }
+
   .experience, .enhance, .exploree{
     width: 150px;
   }
@@ -256,6 +264,24 @@ body{
     border: none !important;
   }
 
+  @media screen and (max-width: 520px) {
+    .yellow{
+      font-size: 18px !important;
+    }
+    .upper{
+      padding: 15px;
+    }
+    .menu-button{
+      left: 15px;
+    }
+    .social{
+      padding-left: 10px;
+    }
+    .logo{
+      height: 120px;
+      width: 120px;
+    }
+}
   .lower{
     padding-top: 0px;
     padding-bottom: 90px;
@@ -357,6 +383,95 @@ body{
     }
   }
 
+  @media screen and (max-width: 610px) {
+    .fourth-car{
+      display: block;
+      width: 400px;
+    }
+    .carr{
+      display: flex;
+      gap: 10px;
+      position: relative;
+      justify-content: center;
+    }
+    .car-img{
+      width: 400px;
+    }
+    .images{
+      padding-top: 20px;
+    }
+    .experience{
+      position: relative;
+      margin-right: 10px;
+      width: 150px;
+    }
+  
+    .enhance{
+      position: relative;
+      
+      width: 120px;
+    }
+  
+     .exploree{
+      position: relative;
+      bottom: -60px;
+      width: 120px;
+    }
+    .lower {
+      padding-top: 0px;
+      padding-bottom: 90px;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 462px) {
+  .fourth-car{
+    display: block;
+    width: 300px;
+  }
+  .carr{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    justify-content: center;
+  }
+  .car-img{
+    width: 300px;
+  }
+  .images{
+    padding-top: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  .experience{
+    position: static;
+    margin-right: 10px;
+    width: 150px;
+  }
+
+  .enhance{
+    position: static;
+    left: 0;
+    width: 120px;
+  }
+
+   .exploree{
+    position: static;
+    
+    width: 120px;
+  }
+  .lower {
+    padding-top: 0px;
+    padding-bottom: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+}
+
   #section2{
     padding: 30px;
     padding-top: 200px;
@@ -421,54 +536,6 @@ body{
     width: 100%;
   }
 
-  @media screen and (max-height: 672px) {
-    #section2{
-      padding-top: 300px;
-    }
-  
-    .left-shape{
-      top: 300px;
-    }
-    .plane{
-      top: 480px;
-    }
-  }
-  @media screen and (max-height: 547px) {
-    #section2{
-      padding-top: 400px;
-    }
-  
-    .left-shape{
-      top: 400px;
-    }
-    .plane{
-      top: 580px;
-    }
-  }
-  @media screen and (max-height: 435px) {
-    #section2{
-      padding-top: 500px;
-    }
-  
-    .left-shape{
-      top: 500px;
-    }
-    .plane{
-      top: 680px;
-    }
-  }
-  @media screen and (max-height: 339px) {
-    #section2{
-      padding-top: 600px;
-    }
-  
-    .left-shape{
-      top: 600px;
-    }
-    .plane{
-      top: 780px;
-    }
-  }
 
   @media screen and (min-width: 1600px) {
     #section2{
@@ -576,6 +643,82 @@ body{
     }
   }
 
+  @media screen and (max-width: 842px) {
+    .section2-content{
+      padding-top: 400px;
+      width: 80%;
+    }
+    .left-shape{
+      top: 300px;
+      height: 250px;
+    }
+  
+    .right-shape{
+      bottom: -250px;
+      height: 250px;
+    }
+  
+    .plane{
+      right: 5%;
+      top: 480px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .section2-content{
+      padding-top: 400px;
+      width: 95%;
+    }
+  }
+
+  @media screen and (max-height: 672px) {
+    #section2{
+      padding-top: 300px;
+    }
+  
+    .left-shape{
+      top: 300px;
+    }
+    .plane{
+      top: 400px;
+    }
+  }
+  @media screen and (max-height: 547px) {
+    #section2{
+      padding-top: 400px;
+    }
+  
+    .left-shape{
+      top: 400px;
+    }
+    .plane{
+      top: 500px;
+    }
+  }
+  @media screen and (max-height: 435px) {
+    #section2{
+      padding-top: 500px;
+    }
+  
+    .left-shape{
+      top: 500px;
+    }
+    .plane{
+      top: 600px;
+    }
+  }
+  @media screen and (max-height: 339px) {
+    #section2{
+      padding-top: 550px;
+    }
+  
+    .left-shape{
+      top: 600px;
+    }
+    .plane{
+      top: 650px;
+    }
+  }
+
   #section3{
     background-image: linear-gradient(8deg, var(--darkBlue) 70%, #F8F6F4 calc(70% + 2px));
     display: flex;
@@ -649,20 +792,41 @@ body{
   }
 
   @media screen and (max-width: 890px) {
+    #section3{
+      /* height: 1000px; */
+      display: block;
+      text-align: center;
+    }
     .section3-img{
       width: 450px;
       position: relative;
       left: -20px;
+      top: 80px;
     }
     .section3-contentt{
-      top: 40px;
-      width: 60%;
-      padding-right: 70px;
+      top: 120px;
+      width: 80%;
+      padding-right: 0px;
+      padding-bottom: 80px;
       font-size: 22px;
+      margin: 0 auto;
     }
-    #section3{
-      gap: 30px;
-      flex-wrap: wrap;
+  }
+  @media screen and (max-width: 491px) {
+    
+    .section3-img{
+      width: 300px;
+      position: relative;
+      left: -110px;
+      top: 80px;
+    }
+    .section3-contentt{
+      top: 120px;
+      width: 80%;
+      padding-right: 0px;
+      padding-bottom: 80px;
+      font-size: 22px;
+      margin: 0 auto;
     }
   }
 
@@ -940,7 +1104,7 @@ button:focus{
   width: 500px;
   max-height: 600px;
   right: 50%;
-  margin-right: -255px;
+  margin-right: -250px;
   top: 720px;
 }
 
@@ -952,7 +1116,37 @@ button:focus{
 }
 #prev-btn, #next-btn{
   bottom: -410px;
+  right: 10px;
 }
+}
+@media screen and (max-width: 555px) {
+  .gallery {
+    width: 400px;
+    max-height: 500px;
+    margin-right: -200px;
+  }
+  #prev-btn, #next-btn{
+    bottom: -260px;
+  }
+  .right-section{
+    height: 400px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .gallery {
+    width: 250px;
+    max-height: 350px;
+    margin-right: -125px;
+  }
+  #prev-btn, #next-btn{
+    bottom: -80px;
+  }
+  .right-section{
+    height: 200px;
+  }
+  #view-all{
+    bottom: 30px;
+  }
 }
 
 
@@ -1006,6 +1200,132 @@ button:focus{
 .fifth-wall{
   width: 20%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1179px) {
+  #section5{
+    height: 550px;
+}
+  .love-wall-img{
+    width: 550px;
+    height: 250px;
+    padding: 20px 10px;
+}
+
+}
+@media screen and (max-width: 1087px) {
+  #section5{
+    height: 650px;
+}
+  .love-wall-img{
+    width: 500px;
+    height: 250px;
+    padding: 20px 10px;
+}
+.first-wall, .second-wall, .third-wall, .fourth-wall{
+  position: absolute;
+  width: 25%;
+}
+
+.first-wall{
+  top: 30px;
+  left: 20px;
+}
+.second-wall{
+  bottom: 30px;
+  left: 20px;
+}
+.third-wall{
+  right: 20px;
+  top: 30px;
+}
+.fourth-wall{
+  right: 20px;
+  bottom: 30px;
+}
+.fifth-wall{
+  width: 25%;
+  margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 943px) {
+  #section5{
+    height: 650px;
+}
+  .love-wall-img{
+    width: 400px;
+    height: 200px;
+    padding: 20px 10px;
+}
+.first-wall, .second-wall, .third-wall, .fourth-wall{
+  position: absolute;
+  width: 25%;
+}
+
+.first-wall{
+  top: 30px;
+  left: 20px;
+}
+.second-wall{
+  bottom: 30px;
+  left: 20px;
+}
+.third-wall{
+  right: 20px;
+  top: 30px;
+}
+.fourth-wall{
+  right: 20px;
+  bottom: 30px;
+}
+.fifth-wall{
+  width: 25%;
+  margin: 0 auto;
+}
+}
+@media screen and (max-width: 794px) {
+  #section5{
+    height: auto;
+}
+  .love-wall-img{
+    width: 500px;
+    height: 300px;
+    padding: 30px 10px;
+
+}
+.first-wall, .second-wall, .third-wall, .fourth-wall, .fifth-wall{
+  position: static;
+  width: 45%;
+}
+.wall-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+}
+
+@media screen and (max-width: 538px) {
+  
+  .love-wall-img{
+    width: 400px;
+    height: 250px;
+    padding: 30px 10px;
+
+}
+
+}
+@media screen and (max-width: 445px) {
+  
+  .love-wall-img{
+    width: 280px;
+    height: 200px;
+    padding: 30px 10px;
+}
+.first-wall, .second-wall, .third-wall, .fourth-wall, .fifth-wall{
+  width: 100%;
+}
 }
 
 #section6, #section7{
@@ -1072,13 +1392,13 @@ button:focus{
 }
 
 @media screen and (max-width: 1078px) {
-  /* .radius-img{
-    height: 250px;
-    width: 200px;
-} */
+  
 #section6, #section7{
   flex-wrap: wrap;
   flex-direction: column;
+}
+#section6{
+  flex-direction: column-reverse;
 }
 .frames{
   width: 100%;
@@ -1087,6 +1407,30 @@ button:focus{
 .section6-content, .section7-content{
  width: 100%;
 }
+}
+@media screen and (max-width: 601px) {
+  .radius-img{
+    height: 250px;
+    width: 200px;
+}
+.section6-content p, .section7-content p{
+  width: 90%;
+}
+.white{
+  width: 90%;
+}
+}
+@media screen and (max-width: 467px) {
+  .frames{
+    width: 100%;
+     text-align: center;
+     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .radius-img{
+    height: 300px;
+    width: 250px;
+  }
 }
 
 #section8{
@@ -1123,6 +1467,20 @@ button:focus{
   letter-spacing: 1.5px;
   width:400px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 610px) {
+  .section8-content p{
+    width:80%;
+  }
+  .section8-content{
+    padding: 40px 20px;
+    text-align: center;
+    width: 95%;
+  }
+  .section8-content h1{
+    width: 95%;
+  }
 }
 
 footer{
@@ -1246,5 +1604,60 @@ footer a{
 }
 footer a:hover{
   text-decoration: none;
+}
+@media screen and (max-width: 1272px) {
+  form {
+    width: 300px;
+    margin: auto;
+    padding: 0px;
+  }
+  .details{
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+@media screen and (max-width: 1103px) {
+  form {
+    width: 300px;
+    margin: auto;
+    padding: 0px;
+  }
+  .details{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  footer{
+    padding: 20px;
+  }
+  .footer-wrapper{
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  .map{
+    width: 400px;
+    height: 330px;
+  }
+  form {
+    width: 400px;
+    padding-top: 30px;
+  }
+  .details a{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  
+  .map{
+    width: 300px;
+    height: 230px;
+  }
+  form {
+    width: 250px;
+    padding-top: 30px;
+  }
 }
 
