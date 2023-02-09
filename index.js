@@ -39,13 +39,15 @@ $(document).ready(function () {
   let backImageAspectRatio = backImage.width() / backImage.height();
   let topImageAspectRatio = topImage.width() / topImage.height();
 
-  if (topImageAspectRatio > backImageAspectRatio) {
-    topImage.css("width", "100%");
-    topImage.css("height", "auto");
-  } else {
-    topImage.css("width", "auto");
-    topImage.css("height", "100%");
-  }
+  // if (topImageAspectRatio > backImageAspectRatio) {
+  //   topImage.css("width", "100%");
+  //   topImage.css("height", "auto");
+  //   topImage.css("width", "auto");
+  //   topImage.css("height", "100%");
+  // } else {
+  //   topImage.css("width", "auto");
+  //   topImage.css("height", "100%");
+  // }
 });
 
 

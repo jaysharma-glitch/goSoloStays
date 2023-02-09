@@ -74,7 +74,7 @@ body{
     position: fixed;
     z-index: 100;
     left: 30px;
-    top: 70px;
+    top:110px;
     font-family: 'Noah', sans-serif;
     display: flex;
     gap: 5px;
@@ -264,6 +264,15 @@ body{
     display: flex;
     gap: 10px;
   }
+  .text{
+    padding: 10px 0px;
+    padding-left: 10px;
+    text-align: left;
+  }
+  .text a{
+    color: black;
+  }
+  
   .social img{
     height: 23px;
   }
@@ -274,13 +283,19 @@ body{
     border: 1px solid black !important;
   
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 680px) {
     .yellow{
       font-size: 18px !important;
     }
     .logo{
       height: 120px;
       width: 120px;
+    }
+    .upper{
+      padding: 20px;
+    }
+    .menu-button{
+      left: 20px;
     }
   }
   
@@ -289,19 +304,39 @@ body{
     .upper{
       padding: 15px;
       flex-direction: row-reverse;
+      justify-content: space-between;
     }
     .menu-button{
       left: unset;
       right: 15px;
     }
+    .social-menu{
+      text-align: right;
+    }
     .social{
       padding-left: unset;
       padding-right: 10px;
+      /* float: right; */
+      display: block;
+      text-align: right;
     }
-    
+    .social a{
+      padding-right: 2px;
+    }
+    .text{
+      text-align: right;
+      
+    }
     .button-div{
       display: none;
     }
+}
+
+@media screen and (max-width: 410px) {
+  .text{
+    font-size: 12px;
+    
+  }
 }
 @media screen and (max-width: 307px) {
   .logo{
@@ -309,8 +344,11 @@ body{
     width: 100px;
   }
   .menu-button{
-    right: 20px;
+    right: 10px;
+    font-size: 15px;
+    top: 90px;
   }
+  
 }
   .lower{
     padding-top: 0px;
@@ -1038,7 +1076,7 @@ button:focus{
   }
   .tape{
     position: absolute;
-    top: 630px;
+    top: 660px;
     right: 50%;
     margin-right: -100px;
   }
@@ -1057,17 +1095,17 @@ button:focus{
   max-height: 600px;
   right: 50%;
   margin-right: -250px;
-  top: 720px;
+  top: 750px;
 }
 
 #view-all{
   position: absolute;
   right: 50%;
   margin-right: -100px;
-  bottom: 50px;
+  bottom: 30px;
 }
 #prev-btn, #next-btn{
-  bottom: -410px;
+  bottom: -430px;
   right: 10px;
 }
 }
@@ -1078,10 +1116,10 @@ button:focus{
     margin-right: -200px;
   }
   #prev-btn, #next-btn{
-    bottom: -260px;
+    bottom: -310px;
   }
   .right-section{
-    height: 400px;
+    height: 420px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -1091,10 +1129,10 @@ button:focus{
     margin-right: -125px;
   }
   #prev-btn, #next-btn{
-    bottom: -80px;
+    bottom: -110px;
   }
   .right-section{
-    height: 200px;
+    height: 230px;
   }
   #view-all{
     bottom: 30px;
