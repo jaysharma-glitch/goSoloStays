@@ -61,8 +61,20 @@ let lightboxNext = document.getElementById("lightbox-next");
 let lightboxClose = document.getElementById("lightbox-close");
 let viewAll = document.getElementById("view-all");
 
-let images = ["./assets/images/gallery1.webp", "./assets/images/gallery2.webp", './assets/images/gallery3.webp', './assets/images/gallery4.webp',
-'./assets/images/gallery5.webp'];
+let images = [
+  "./assets/images/gallery1.webp",
+"./assets/images/gallery2.webp",
+'./assets/images/gallery3.webp',
+'./assets/images/gallery4.webp',
+'./assets/images/gallery5.webp',
+'./assets/images/gallery6.webp',
+'./assets/images/gallery7.webp',
+'./assets/images/gallery8.webp',
+'./assets/images/gallery9.webp',
+'./assets/images/gallery10.webp',
+'./assets/images/gallery11.webp',
+'./assets/images/gallery12.webp',
+];
 let currentIndex = 0;
 
 currentImg.addEventListener("click", function() {
@@ -113,6 +125,7 @@ lightboxNext.addEventListener("click", function() {
 
 
 function sendForm() {
+  console.log('kdjshfk hsdfjkh sajkdfhkjasdhfjkahsdfjkhnaskdjfhk ajsdfhjksad fjkasdhfjk hasdjkfhajksd hfjkahsdjkfh ajksdhfkjashdf kjahsdfjkhasdjkfhjkasfh djkas');
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
   const message = document.getElementById("message").value;
@@ -122,20 +135,27 @@ function sendForm() {
     return;
   }
 
-  if (!/^[a-zA-Z\s]+$/.test(name)) {
-    alert("Name can only contain letters and spaces.");
-    return;
-  }
+  // if (!/^[a-zA-Z\s]+$/.test(name)) {
+  //   alert("Name can only contain letters and spaces.");
+  //   return;
+  // }
 
-  if (!/^\d+$/.test(phone)) {
-    alert("Phone number can only contain numbers.");
-    return;
-  }
+  // if (!/^\d+$/.test(phone)) {
+  //   alert("Phone number can only contain numbers.");
+  //   return;
+  // }
 
-  emailjs.sendForm('service_i3c4w7l', 'template_re618os', 'form_id')
+    // Define your email parameters
+    const params = {
+      from_name: name,
+      phoneNumber: phone,
+      message: message
+    };
+
+  emailjs.send('service_i3c4w7l', 'template_6hqbsfk', params, '6013xHj3NqxqEv-h-')
     .then(function(response) {
        console.log('Email successfully sent!')
-       alert('Email successfully sent!');
+       alert('Email successfully sent! Thank you for reaching out to use. We will get back to you shortly.');
     }, function(error) {
        console.log('Failed to send email: ' + error);
        alert('There was some problem with the server. Please try again later or reach out to us directly')
